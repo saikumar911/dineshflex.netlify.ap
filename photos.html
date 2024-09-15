@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dinesh flex</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #280659;   
+        }
+    
+    .slider-container {
+        max-width: 800px;
+        margin: 50px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .slider {
+        display: flex;
+    }
+    
+    .slide {
+        flex: 1;
+        transition: transform 1s ease-in-out;
+        overflow: hidden;
+    }
+    
+    .slide img {
+        width: 100%;
+        display: block;
+    }
+    
+    .review-container {
+        margin-top: 50px;
+        text-align: center;
+    }
+    
+    .customer-review {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+.color-changing-text {
+  font-size: 70px;
+  background: linear-gradient(to right, #36d1dc, #5b86e5, #36d1dc);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: animate 1.5s linear infinite;
+  background-color: lightskyblue;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.nav-item {
+  padding: 10px 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #4CAF50;
+}
+
+.nav-toggle {
+  display: none;
+  background-color: #333;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  position: relative;
+  top: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  top: -10px;
+}
+
+.hamburger::after {
+  top: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  .nav-item {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+.logo {
+  text-align: center;
+}
+.slider {
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the slider */
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  10%{
+    transform: translateX(-5%);
+  }
+  
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slides {
+  animation: slide 2.8s infinite;
+}
+#head {
+  text-align: center;
+  color: #56e1e9;
+  text-shadow: 5px 5px 23px #bb63ff;
+}
+.img{
+  background-color: #f4e7fb;
+  border: solid #c8a8e9 7px;
+
+}
+.customers {
+  color: #80ed99;
+  text-align: center;
+  text-shadow: 3px 5px 20px #bb63ff;
+}
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #7bc6cc;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 94%;
+  border-radius: 10px 0 0 10px;
+  text-align: right;
+  padding-right: 5px;
+  box-sizing: border-box;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.rating-text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: red;
+}
+</style>
+</head>
+<body>
+     <nav>
+       
+       <div class="nav-brand"><a href="https://dineshflex.netlify.app/">Dinesh flex</a></div>
+  
+       <button class="nav-toggle" aria-label="toggle navigation" style="column-gap: 5;">
+         <span class="hamburger"></span>
+       </button>
+       <ul class="nav-menu">
+         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+         <li class="nav-item"><a style="color: #4CAF50;" href="#" class="nav-link">Services</a></li>
+         <li class="nav-item"><a style=";" href="photos.html" class="nav-link">customers reweiv</a></li>
+       </ul>
+     </nav>
+     <h6>
+<div class="logo">
+  <img src="dinesh--logo.png" alt="dinesh-logo.png" width="400px" height="400px">
+</div>
+<h1 id="head">OUR SERVICE</h1>
+<div class="slider">
+  <div class="slides">
+    <div class="slide">
+      <img src="flex2.jpeg" alt="Image 1">
+    </div>
+    <div class="slide">
+      <img src="flex1.jpg" alt="Image 2">
+    </div>
+    <div class="slide">
+      <img src="DqhIOGvrSYiAxNdcr7zaIA-1.webp" alt="Image 3">
+    </div>
+  </div>
+</div>
+<script src="main.js"></script>
+<script src="slide.js"></script>
+<hr>
+<br>
+<br>
+<br>
+<h1 class="customers">OUR CUSTOMERS REVIEW<div></div></h1>
+<div class="progress-bar">
+  <div class="progress">4.7</div>
+</div>
+<div class="rating-text">Rating: 4.7 out of 5 in maps</div>
+<div class="img">
+  <img src="sai.jg" alt="" width="33.3%" height="auto">
+    <img src="img1.jpg" alt="" width="" height="auto">
+      <img src="img2.jpg" alt="" width="" height="auto">
+        <img src="img3.jpg" alt="" width="150" height="150">
+          <img src="img4.jpg" alt="" width="" height="auto">
+            <img src="img5.jpg" alt="" width="" height="auto">
+              <img src="img6.jpg" alt="" width="" height="auto">
+                <img src="img7.jpg" alt="" width="" height="auto">
+                  <img src="img8.jpg" alt="" width="" height="auto">
+                    <img src="img9.jpg" alt="" width="" height="auto">
+                      <img src="" alt="" width="" height="auto">
+                        <img src="img12.jpg" alt="" width="" height="auto">
+                         <!-- <img src="img13.jpg" alt="" width="" height="auto">-->
+                            <img src="img14.jpg" alt="" width="" height="auto">
+                            
+                        
+  <img src="" alt="">
+</div>
+</body>
+</html>
