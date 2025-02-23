@@ -1,6 +1,7 @@
 body {
   background-color: #280659;
   color: ghostwhite;
+  
 }
 nav {
   display: flex;
