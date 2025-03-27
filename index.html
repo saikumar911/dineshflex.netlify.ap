@@ -11,7 +11,19 @@
 <link rel="icon" href="img/file:///storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/my project/img-1.jpg" width="50" height="50">
 <title>DINESH FLEX</title>
 <link rel="stylesheet" href="style.css">
-
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "a3968a3b-9bd9-4168-84bf-81f9d99140d2",
+      safari_web_id: "web.onesignal.auto.0be2159b-fe04-48af-91ed-a963117d84ac",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
 </head>
 
 <body>
